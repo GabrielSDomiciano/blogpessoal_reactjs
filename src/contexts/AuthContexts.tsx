@@ -19,6 +19,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
   const [usuario, setUsuario] = useState<UsuarioLogin>({
     id: 0,
     nome: "",
+    senha:"",
     usuario: "",
     foto: "",
     token: "",
@@ -29,7 +30,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
   async function handleLogin(usuarioLogin: UsuarioLogin) {
     setIsLoading(true);
     try {
-      await login("/usuarios/login", usuarioLogin, setUsuario);
+      await login("/usuarios/logar", usuarioLogin, setUsuario);
       alert("O usuário foi autenticado com sucesso!");
     } catch (error) {
       alert("Os dados do usuário estão inconsistentes.");
@@ -41,6 +42,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
   function handleLogout() {
     setUsuario({
       id: 0,
+      senha:"",
       nome: "",
       usuario: "",
       foto: "",

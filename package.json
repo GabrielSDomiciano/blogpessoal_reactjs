@@ -15,10 +15,7 @@
     "axios": "^1.7.9",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-<<<<<<< HEAD
     "react-loader-spinner": "^6.1.6",
-=======
->>>>>>> 01604b4d4bb079cb5131404604d19974d1c3dcda
     "react-router-dom": "^7.1.5",
     "tailwindcss": "^4.0.6"
   },
